@@ -13,6 +13,19 @@ public class Employee {
         rate = 0;
         hours = 0;
     }
+    public String getTypeRules(){
+        return "1 or 2 > ";
+    }
+    
+    public String getNameRules(){
+        return "Minimum 1 letter > ";
+    }
+    public String getRateRules(){
+        return "between 6.75 and 30.50, inclusive > ";
+    }
+    public String getHourRules(){
+        return "between 1 and 60, inclusive > ";
+    }
     
     public boolean setName(String nm){
         boolean blank = (nm.equals(""));
@@ -33,8 +46,9 @@ public class Employee {
         }
     }
     public boolean setRate(double rt){
-        boolean rateok = (t==1 || t==2);
+        boolean rateok = (rt>=6.75 && rt<=30.50);
         if(rateok){
+            rate=rt;
             return true;
         }
         else
@@ -42,7 +56,14 @@ public class Employee {
     }
     
     public boolean setHours(int hrs){
-        boolean hoursok = hrs >=1 && hrs<=60);
+        boolean hoursok = (hrs >=1 && hrs<=60);
+        if (hoursok){
+            hours = hrs;
+            return true;
+            
+        }
+        else
+            return false;
         
     }
     
@@ -54,6 +75,9 @@ public class Employee {
         boolean noovertime = hours <=40 || type ==2;
         if(noovertime)
             pay = rate*hours;
+        else
+            pay = (hours-40) * (rate*2)+rate*40;
+        return pay;
     }
     
 }
