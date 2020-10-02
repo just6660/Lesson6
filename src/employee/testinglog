@@ -36,14 +36,14 @@ Testing Log
 
 Test #           Description                        Expected           Result
 =======           ==========                     ============           =======
-1 (Code Coverage) Rate:10,Type:1,Hours30           300             
-2 (Code Coverage) Rate:10,Type:1,Hours50         400+200 = 600
+1 (Code Coverage) Rate:10,Type:1,Hours30           300                  300
+2 (Code Coverage) Rate:10,Type:1,Hours50         400+200 = 600          600
 
-3(Boundary)       R:10,T:1,H:39,40,41            OT only for 41
+3(Boundary)       R:10,T:1,H:39,40,41            OT only for 41       390, 400, 410
 
-4(Extreme)        R:10,T:1,H:0 and 168           Hours not set
+4(Extreme)        R:10,T:1,H:0 and 168           Hours not set        hours not set
 
-5(Boundary)   R:6.49,6.50,30.50,30.51 T:1 H:10 Rate only set for #2,3 
-7(Boundary)   R:10 T:2 H:0,1,60,61             Hours only set for #2,3
-8(Boundary)   R:10 T:0,1,2,3 H:45              Type only set for #2,3
+5(Boundary)   R:6.74,6.75,30.50,30.51 T:1 H:10 Rate only set for #2,3   rate only set for #2,3 ($67.5, $305)
+7(Boundary)   R:10 T:2 H:0,1,60,61             Hours only set for #2,3   hours only set for #2,3 ($10 , $600)
+8(Boundary)   R:10 T:0,1,2,3 H:45              Type only set for #2,3    type only set for #2,3 ($500, $450) 
                                               OT only for type 1 and not 2

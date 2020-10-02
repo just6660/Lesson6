@@ -38,6 +38,7 @@ public class Employee {
     }
     public boolean setType(int t){
         boolean oneortwo = (t==1 || t==2);
+        type = t;
         if(oneortwo){
             return true;
         }
