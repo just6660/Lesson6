@@ -39,7 +39,7 @@ Test #           Description                        Expected           Result
 1 (Code Coverage) Rate:10,Type:1,Hours30           300                  300
 2 (Code Coverage) Rate:10,Type:1,Hours50         400+200 = 600          600
 
-3(Boundary)       R:10,T:1,H:39,40,41            OT only for 41       390, 400, 410
+3(Boundary)       R:10,T:1,H:39,40,41            OT only for 41       390, 400, 420
 
 4(Extreme)        R:10,T:1,H:0 and 168           Hours not set        hours not set
 
