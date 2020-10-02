@@ -17,9 +17,9 @@ public class GuessMachine {
         else if(guess==number)
             str = "You got it";
         else if(guess>number)
-            str = "too high guess lower";
+            str = "You guessed: " + guess + ". Too high guess lower";
         else
-            str = "too low guess higher";
+            str = "You guessed: " + guess + ". Too low guess higher";
 
         return str;
             
